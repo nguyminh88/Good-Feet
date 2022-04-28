@@ -1,0 +1,229 @@
+<template>
+    <template if:true={StoreHighestReceipt.data}>
+        <div class="container"></div>
+        <div class='confetti'></div>
+                    <div class='confetti'></div>
+                    <div class='confetti'></div>
+                    <div class='confetti'></div>
+                    <div class='confetti'></div>
+                    <div class='confetti'></div>
+                    <div class='confetti'></div>
+                    <div class='confetti'></div>
+                    <div class='confetti'></div>
+                    <div class='confetti'></div>
+                    <div class='confetti'></div>
+        </template>
+    <template if:true={CompanyIndividualHighMonth.data}>
+            <div class="container"></div>
+            <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+    </template>
+    <template if:true={CompanyIndividualHighDay.data}>
+                <div class="container"></div>
+                <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+    </template>
+    <template if:true={CompanyStoreHighMonth.data}>
+                    <div class="container"></div>
+                    <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+    </template>
+    <template if:true={CompanyStoreHighDay.data}>
+    <div class="container"></div>
+     <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+    </template>
+    <template if:true={StoreHighMonth.data}>
+        <div class="container"></div>
+        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+    </template>
+    <template if:true={IndividualHighMonth.data}>
+        <div class="container"></div>
+        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+    </template>
+    <template if:true={BrokenRecord.data}>
+        <div class="container"></div>
+        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+    </template>
+    <template if:true={IndividualHighDayRecord.data}>
+        <div class="container"></div>
+         <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+                        <div class='confetti'></div>
+    </template>         
+
+                    <div class="blink_me">
+                    <div class="blink_me2">
+                                       
+    <b style="color:red">                   
+    <template if:true={StoreHighestReceipt}>
+        <template for:each={StoreHighestReceipt.data} for:item="BR">
+            <lightning-card key={BR.Id}>
+                    <div class="slds-box slds-theme_shade slds-theme_alert-texture">
+                            <p key={BR.Id} class="slds-align_absolute-center">NEW COMPANY RECORD! {BR.Top_Sale_Receipt_Sales_Rep__c} in {BR.LastName} broke the record for largest receipt in the company with ${BR.Top_Sale_Receipt_Amount__c}!</p>
+                        </div>
+            </lightning-card>
+        </template>
+    </template>
+    <template if:true={CompanyIndividualHighMonth}>
+        <template for:each={CompanyIndividualHighMonth.data} for:item="BR">
+            <lightning-card key={BR.Id}>
+                    <div class="slds-box slds-theme_shade slds-theme_alert-texture">
+                            <p key={BR.Id} class="slds-align_absolute-center">NEW COMPANY RECORD! {BR.Name} in {BR.Owner.LastName} broke the company highest monthly individual sales last month with ${BR.Highest_Month_Amount__c}!</p>
+                            <p key={BR.Id} class="slds-align_absolute-center">Way to go, {BR.FirstName__c}!</p>
+                        </div>
+            </lightning-card>
+        </template>
+    </template>
+    <template if:true={CompanyIndividualHighDay}>
+        <template for:each={CompanyIndividualHighDay.data} for:item="BR">
+            <lightning-card key={BR.Id}>
+                    <div class="slds-box slds-theme_shade slds-theme_alert-texture">
+                            <p key={BR.Id} class="slds-align_absolute-center">NEW COMPANY RECORD! {BR.Name} in {BR.Owner.LastName} broke the company highest individual sale day record yesterday with ${BR.Highest_Sale_Day_Amount__c}!</p>
+                            <p key={BR.Id} class="slds-align_absolute-center">Amazing job, {BR.FirstName__c}!</p>
+                        </div>
+            </lightning-card>
+        </template>
+    </template>
+    <template if:true={CompanyStoreHighMonth}>
+        <template for:each={CompanyStoreHighMonth.data} for:item="BR">
+            <lightning-card key={BR.Id}>
+                    <div class="slds-box slds-theme_shade slds-theme_alert-texture">
+                            <p key={BR.Id} class="slds-align_absolute-center">NEW COMPANY RECORD! The {BR.LastName} team broke the company highest monthly record last month with ${BR.Highest_Month_Amount__c}!</p>
+                            <p key={BR.Id} class="slds-align_absolute-center">Congratulations to all the {BR.LastName} team members!</p>
+                        </div>
+            </lightning-card>
+        </template>
+    </template>
+    <template if:true={CompanyStoreHighDay}>
+        <template for:each={CompanyStoreHighDay.data} for:item="BR">
+            <lightning-card key={BR.Id}>
+                    <div class="slds-box slds-theme_shade slds-theme_alert-texture">
+                            <p key={BR.Id} class="slds-align_absolute-center">NEW COMPANY RECORD! The {BR.LastName} team broke the company highest day record yesterday with ${BR.Highest_Day_Sale_Amount__c}!</p>
+                            <p key={BR.Id} class="slds-align_absolute-center">Keep up the great work, {BR.LastName}!</p>
+                        </div>
+            </lightning-card>
+        </template>
+    </template>
+    </b>  
+    </div>
+    <template if:true={StoreHighMonth}>
+        <template for:each={StoreHighMonth.data} for:item="BR">
+            <lightning-card key={BR.Id}>
+                <div class="slds-box slds-theme_shade slds-theme_alert-texture" style="color:blue">
+                    <p key={BR.Id} class="slds-align_absolute-center">The {BR.LastName} team broke their previous high monthly sale record last month!</p>
+                    <p key={BR.Id} class="slds-align_absolute-center">Previous Record: ${BR.Previous_High_Month_Amount__c} on {BR.Previous_High_Month_Date_Formula__c}</p>
+                    <p key={BR.Id} class="slds-align_absolute-center">New Record: ${BR.Highest_Month_Amount__c} on {BR.High_Month_Date_Formula__c}</p>
+                </div>  
+            </lightning-card>
+        </template>
+    </template>
+    <template if:true={IndividualHighMonth}>
+        <template for:each={IndividualHighMonth.data} for:item="BR">
+            <lightning-card key={BR.Id}>
+                <div class="slds-box slds-theme_shade slds-theme_alert-texture" style="color:#9900ff">
+                    <p key={BR.Id} class="slds-align_absolute-center">{BR.Name} in {BR.Owner.LastName} set a new personal monthly sale record last month!</p>
+                    <p key={BR.Id} class="slds-align_absolute-center">Previous Record: ${BR.Previous_High_Sale_Month_Amount__c} on {BR.Previous_High_Sale_Month_Date_Formula__c}</p>
+                    <p key={BR.Id} class="slds-align_absolute-center">New Record: ${BR.Highest_Month_Amount__c} on {BR.High_Sale_Month_Formula__c}</p>
+                </div>
+            </lightning-card>
+        </template>
+    </template>
+    <template if:true={BrokenRecord}>
+                <template for:each={BrokenRecord.data} for:item="BR">
+                    <lightning-card key={BR.Id}>
+                        <div class="slds-box slds-theme_shade slds-theme_alert-texture" style="color:#cc3399">
+                            <p key={BR.Id} class="slds-align_absolute-center">The {BR.LastName} team broke their previous daily sales record!</p>
+                            <p key={BR.Id} class="slds-align_absolute-center">Previous Record: ${BR.Previous_Highest_Day_Sale__c} on {BR.Previous_High_Sale_Date_Formula__c}</p>
+                            <p key={BR.Id} class="slds-align_absolute-center">New Record: ${BR.Highest_Day_Sale_Amount__c}   on {BR.High_Sale_Date_Formula__c}</p>
+                        </div>
+                    </lightning-card>
+                </template>
+        </template>
+        <template if:true={IndividualHighDayRecord}>
+            <template for:each={IndividualHighDayRecord.data} for:item="BR">
+                <lightning-card key={BR.Id}>
+                    <div class="slds-box slds-theme_shade slds-theme_alert-texture" style="color:green">
+                        <p key={BR.Id} class="slds-align_absolute-center">{BR.Name} in {BR.Owner.LastName} broke a new personal daily sale record!</p>
+                        <p key={BR.Id} class="slds-align_absolute-center">Previous Record: ${BR.Previous_High_Sale_Day_Amount__c} on {BR.Previous_High_Sale_Date_Formula__c}</p>
+                        <p key={BR.Id} class="slds-align_absolute-center">New Record: ${BR.Highest_Sale_Day_Amount__c} on {BR.High_Sale_Date_Formula__c}</p>
+                    </div>
+                </lightning-card>
+            </template>
+    </template>
+</div> 
+</template>

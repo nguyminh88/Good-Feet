@@ -1,0 +1,31 @@
+<template>
+    <template if:true={account.data}></template>
+    <lightning-card title="Referrer Information">
+        <lightning-record-edit-form record-id={accountId}
+                                object-api-name="Account">
+            <lightning-output-field field-name="Referred_By__c">
+            </lightning-output-field>
+            <lightning-input-field value={referredById} data-field="ReferredBy" field-name="Referred_By__c">
+             </lightning-input-field>
+             <lightning-button label="Update" onclick={updateAccount}></lightning-button>
+            </lightning-record-edit-form>
+    </lightning-card>
+        <lightning-card title="My Referral Information">
+           <lightning-record-view-form
+                record-id={accountId}
+                object-api-name="Account">
+                <div class="slds-box slds-theme_default">
+                    <lightning-output-field field-name="Referral_Code__c">
+                    </lightning-output-field>
+                    <lightning-output-field field-name="SuccessfulReferrals__c">
+                    </lightning-output-field>
+                    <lightning-output-field field-name="Referral_Purchase_Total__c">
+                    </lightning-output-field>
+                    <lightning-output-field field-name="Average_Referred_Ticket_Amount__c">
+                    </lightning-output-field>
+                </div>
+            </lightning-record-view-form>
+        </lightning-card>
+        </template>
+        
+</template>
